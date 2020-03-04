@@ -1,0 +1,107 @@
+{form name='settings'}
+<div class="card">
+    <div class="card-header">
+        <i class="fa fa-language"></i> {text key="$key+language"}
+    </div>
+    <div class="card-body">
+        <div class="form-group row">
+            {label name='detectLanguage'}
+            <div class="col-sm-8">
+                {input name='detectLanguage'}
+                {desc name='detectLanguage'}
+                {error name='detectLanguage'}
+            </div>
+        </div>
+        <div class="form-group row">
+            {label name='urlLanguage'}
+            <div class="col-sm-8">
+                {input name='urlLanguage'}
+                {desc name='urlLanguage'}
+                {error name='urlLanguage'}
+            </div>
+        </div>
+        <div class="form-group row">
+            {label name='displayLanguage'}
+            <div class="col-sm-8">
+                {input name='displayLanguage'}
+                {desc name='displayLanguage'}
+                {error name='displayLanguage'}
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="card">
+    <div class="card-header">
+        <i class="fa fa-clock"></i> {text key="$key+time"}
+    </div>
+    <div class="card-body">
+        <div class="form-group row">
+            {label name='siteTimezone'}
+            <div class="col-sm-8">
+                {input name='siteTimezone'}
+                {desc name='siteTimezone'}
+                {error name='siteTimezone'}
+            </div>
+        </div>
+        <div class="form-group row">
+            {label name='dateFormat'}
+            <div class="col-sm-8">
+                {input name='dateFormat'}
+                {desc name='dateFormat'}
+                {error name='dateFormat'}
+            </div>
+        </div>
+        <div class="form-group row">
+            {label name='timeFormat'}
+            <div class="col-sm-8">
+                {input name='timeFormat'}
+                {desc name='timeFormat'}
+                {error name='timeFormat'}
+            </div>
+        </div>
+        <div class="form-group row">
+            {label name='relativeTime'}
+            <div class="col-sm-8">
+                {input name='relativeTime'}
+                {desc name='relativeTime'}
+                {error name='relativeTime'}
+            </div>
+        </div>
+        <div class="form-group row">
+            {label name='relativeTimeRange'}
+            <div class="col-sm-8">
+                {input name='relativeTimeRange'}
+                {desc name='relativeTimeRange'}
+                {error name='relativeTimeRange'}
+            </div>
+        </div>
+        <div class="form-group row">
+            {label name='militaryTime'}
+            <div class="col-sm-8">
+                {input name='militaryTime'}
+                {desc name='militaryTime'}
+                {error name='militaryTime'}
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<div class="card">
+    <div class="card-header">
+        <i class="fa fa-money-bill"></i> {text key="$key+currency"}
+    </div>
+    <div class="card-body">
+        <div class="form-group row">
+            {label name='defaultCurrency'}
+            <div class="col-sm-8">
+                {input name='defaultCurrency'}
+                {desc name='defaultCurrency'}
+                {error name='defaultCurrency'}
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+    {submit name='submit' class='btn btn-primary float-right'}
+{/form}

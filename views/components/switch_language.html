@@ -1,0 +1,5 @@
+<ul class="ow_console_lang">
+    {foreach from=$languages item="language"}
+        <li class="ow_console_lang_item" onclick="location.href='{$language.url}';">{if isset($language.icon)}<i class="famfamfam-flag-{$language.icon}"></i> {/if}{$language.label}</li>
+    {/foreach}
+</ul>
