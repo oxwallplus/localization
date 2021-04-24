@@ -2,8 +2,8 @@
 <info>
     <type>plugin</type>
     <system>1</system>
-    <name>Localization Plugin</name>
-    <key>localization</key>
+    <name>Performance Plugin</name>
+    <key>performance</key>
     <author>
         <name>ArtMedia</name>
         <email>kontakt@artmedia.biz.pl</email>
