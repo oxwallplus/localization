@@ -20,11 +20,7 @@ class LOCALIZATION_FORM_Settings extends Form
         $this->language = OW::getLanguage();
         
         $detectLanguage = new ELEMENT_Checkbox('detectLanguage');
-        $detectLanguage->setToggle(true);
-        $detectLanguage->addAttributes(array(
-            'data-off' => $this->language->text('base', 'no'),
-            'data-on'=> $this->language->text('base', 'yes')
-        ));
+        $detectLanguage->setSwitch();
         $detectLanguage->setLabel($this->language->text($this->key, 'detect_language_from_browser'), array('class' => 'col-sm-4 col-form-label'));
         $this->addElement($detectLanguage);
         
@@ -34,7 +30,6 @@ class LOCALIZATION_FORM_Settings extends Form
             1 => $this->language->text($this->key, 'in_domain'),
             2 => $this->language->text($this->key, 'subdomain'),
         ));
-        $urlLanguage->setSelect2();
         $urlLanguage->setRequired();
         $urlLanguage->setDescription($this->language->text($this->key, 'display_type_desc'));
         $urlLanguage->setLabel($this->language->text($this->key, 'display_type'), array('class' => 'col-sm-4 col-form-label'));
@@ -48,7 +43,6 @@ class LOCALIZATION_FORM_Settings extends Form
             4 => $this->language->text($this->key, 'flag').' + '.$this->language->text($this->key, 'iso_code'),
             5 => $this->language->text($this->key, 'flag').' + '.$this->language->text($this->key, 'language_name'),
         ));
-        $displayLanguage->setSelect2();
         $displayLanguage->setRequired();
         $displayLanguage->setLabel($this->language->text($this->key, 'display_language'), array('class' => 'col-sm-4 col-form-label'));
         $this->addElement($displayLanguage);
@@ -73,11 +67,7 @@ class LOCALIZATION_FORM_Settings extends Form
         $this->addElement($timeFormat);
         
         $relativeTime = new ELEMENT_Checkbox('relativeTime');
-        $relativeTime->setToggle(true);
-        $relativeTime->addAttributes(array(
-            'data-off' => $this->language->text('base', 'no'),
-            'data-on'=> $this->language->text('base', 'yes')
-        ));
+        $relativeTime->setSwitch();
         $relativeTime->setDescription($this->language->text($this->key, 'relative_time_desc'));
         $relativeTime->setLabel($this->language->text($this->key, 'relative_time'), array('class' => 'col-sm-4 col-form-label'));
         $this->addElement($relativeTime);
@@ -90,18 +80,13 @@ class LOCALIZATION_FORM_Settings extends Form
             180 => sprintf($this->language->text('core', 'days'), 180),
             365 => sprintf($this->language->text('core', 'days'), 365),
         ));
-        $relativeTimeRange->setSelect2();
         $relativeTimeRange->setRequired();
         $relativeTimeRange->setDescription($this->language->text($this->key, 'relative_time_range_desc'));
         $relativeTimeRange->setLabel($this->language->text($this->key, 'relative_time_range'), array('class' => 'col-sm-4 col-form-label'));
         $this->addElement($relativeTimeRange);
 
         $militaryTime = new ELEMENT_Checkbox('militaryTime');
-        $militaryTime->setToggle(true);
-        $militaryTime->addAttributes(array(
-            'data-off' => $this->language->text('base', 'no'),
-            'data-on'=> $this->language->text('base', 'yes')
-        ));
+        $militaryTime->setSwitch();
         $militaryTime->setLabel($this->language->text($this->key, 'military_time'), array('class' => 'col-sm-4 col-form-label'));
         $this->addElement($militaryTime);
 

@@ -8,7 +8,7 @@
  * @email kontakt@artmedia.biz.pl
  */
 
-class LOCALIZATION_CTRL_Admin extends ADMIN_CTRL_Abstract
+class LOCALIZATION_CTRL_Admin extends OW_BackendController
 {
     private $key;
     private $language;
@@ -23,7 +23,6 @@ class LOCALIZATION_CTRL_Admin extends ADMIN_CTRL_Abstract
         $this->setPageHeading($this->language->text($this->key, 'admin_title'));
         $this->setPageHeadingIconClass('ow_ic_star');
 
-        OW::getNavigation()->activateMenuItem('admin_settings', 'admin', 'sidebar_menu_performance');
         $this->assign('key', $this->key);
     }
 
